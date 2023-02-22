@@ -31,7 +31,7 @@
                   </MenuItem>
                   <MenuItem fx:id="mnSaveAs" disable="true" mnemonicParsing="false" onAction="#mnSaveAsOnAction" text="Save As">
                      <accelerator>
-                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                        <KeyCodeCombination alt="DOWN" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator>
                   </MenuItem>
                   <MenuItem mnemonicParsing="false" onAction="#mnPrintOnAction" text="Print">

@@ -63,11 +63,20 @@ public class MainFormController {
 
     @FXML
     void mnNewOnAction(ActionEvent event) {
+        String htmlText = txtEditor.getHtmlText();
+        boolean isBodyEmpty = htmlText.replaceAll("\\<.*?\\>", "").trim().isEmpty();
+
+        if (isFileOpened || !isBodyEmpty) {
+            Optional<ButtonType> optButton = new Alert(Alert.AlertType.CONFIRMATION, "File not saved, Do you want to Save?"
+                    , ButtonType.YES, ButtonType.NO).showAndWait();
+            if ( optButton.get() == ButtonType.YES) mnSaveAs.fire();
+        }
         mnSaveAs.setDisable(true);
         isFileOpened = false;
         txtEditor.setHtmlText("");
         Stage stage = (Stage) txtEditor.getScene().getWindow();
         stage.setTitle("Text-Editor");
+
     }
 
     @FXML
@@ -100,8 +109,6 @@ public class MainFormController {
         Stage stage = (Stage) txtEditor.getScene().getWindow();
         String title = stage.getTitle();
 
-        String contentOfCurrentWindow = txtEditor.getHtmlText();
-
         if (title.equals("*Untitled Document")) {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Save a text file");
@@ -115,7 +122,7 @@ public class MainFormController {
 
             fos.close();
         } else {
-            Optional<ButtonType> optButton = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to override"
+            Optional<ButtonType> optButton = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to override?"
                     , ButtonType.YES, ButtonType.NO).showAndWait();
             if (optButton.isEmpty() || optButton.get() == ButtonType.NO) return;
 
@@ -194,6 +201,7 @@ public class MainFormController {
 
         fos.close();
     }
-
-
 }
+
+
+//Dragged
