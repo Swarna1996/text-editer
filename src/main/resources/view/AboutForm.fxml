@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="399.0" prefWidth="341.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.editor.controller.AboutFormController">
+   <children>
+      <ImageView fitHeight="132.0" fitWidth="149.0" layoutX="105.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="105.0">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="14.0" style="-fx-text-fill: blue;" text="Simple Text Editor" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="14.0" layoutY="185.0" prefHeight="238.0" prefWidth="305.0" text="Simpe Text Editor is a modern, easy-to-use,&#10;open source productivity suite for text &#10;editing.&#10;&#10;This release was supplied by the swarna.&#10;Copyright© 2023 Swarna Bandara &#10;&#10;&#10;Version 1.0&#10;&#10;&#10;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="187.0" />
+   </children>
+</AnchorPane>
